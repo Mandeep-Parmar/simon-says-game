@@ -60,6 +60,10 @@ function checkAns(i){
         }
     }
     else{
+        document.querySelector("body").style.backgroundColor = "red";
+        setTimeout(function(){
+            document.querySelector("body").style.backgroundColor = "black";
+        }, 150);
         setTimeout(reset, 500); //Allows user to see mistake
     }
 }
@@ -98,4 +102,5 @@ function reset(){
     started = false;
     acceptingInput = false;
     level = 0;
+
 }
