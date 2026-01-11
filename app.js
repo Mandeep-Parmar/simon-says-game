@@ -22,7 +22,7 @@ function buttonFlash(btn){
 
     setTimeout( function() {
         btn.classList.remove("flash");
-    }, 400);
+    }, 650);
 }
 
 // Lock user input during system flash
@@ -104,3 +104,4 @@ function reset(){
     level = 0;
 
 }
+
