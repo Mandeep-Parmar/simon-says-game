@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* remove blue tap flash (mobile) */
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+}
+
+.btn-container{
+    /* Mobile → 80vw
+    Desktop → capped at 320px */
+    width: 80vw;
+    max-width: 320px;
+    aspect-ratio: 1 / 1; /* Keeps width and height equal on all screens */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 12px;
+    padding: 10px;
+    border-radius: 50%;
+
+    position: relative; /* Needed so center circle is positioned correctly */
+}
+
+.btn{
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.green { 
+    background-color: #2ecc71; 
+    border-top-left-radius: 100%;
+}
+.red { 
+    background-color: #ff4d4d; 
+    border-top-right-radius: 100%;
+}
+.yellow { 
+    background-color: #f1c40f; 
+    border-bottom-left-radius: 100%;
+}
+.blue { 
+    background-color: #3498db; 
+    border-bottom-right-radius: 100%;
+}
+
+.center{
+    position: absolute; /* for place it at center according to parent */
+    /* Size relative to board, scales automatically */
+    height: 35%;
+    width: 35%;
+
+    /* Always center element regardless of its size */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: black;
+    border-radius: 50%;
+
+    /* this three for inner content of circle  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    line-height: 1.4;
+}
+
+.green.flash {
+    box-shadow: 0 0 30px #2ecc71;
+}
+
+.red.flash {
+    box-shadow: 0 0 30px #ff4d4d;
+}
+
+.yellow.flash {
+    box-shadow: 0 0 30px #f1c40f;
+}
+
+.blue.flash {
+    box-shadow: 0 0 30px #3498db;
+}
+
+.btn.flash {
+  transform: scale(1.03);
+}
