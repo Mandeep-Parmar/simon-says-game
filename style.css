@@ -6,6 +6,7 @@
 }
 
 body{
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,22 @@ body{
 }
 
 h1 {
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#high-score {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 0.8rem;
+}
+
+.instruction {
+  font-size: 0.95rem;
+  opacity: 0.7;
 }
 
 h4 {
@@ -64,6 +80,8 @@ h4 {
 }
 
 .center{
+    font-weight: 600;
+
     position: absolute; /* for place it at center according to parent */
     /* Size relative to board, scales automatically */
     height: 35%;
@@ -77,8 +95,9 @@ h4 {
     background-color: black;
     border-radius: 50%;
 
-    /* this three for inner content of circle  */
+    /* this four for inner content of circle  */
     display: flex;
+    flex-direction: column; /* stack text vertically */
     align-items: center;
     justify-content: center;
 
