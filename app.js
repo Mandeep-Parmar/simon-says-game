@@ -36,7 +36,6 @@ function levelUp(){
     level++;
     center.innerText = `Level ${level}`;
     instruction.innerText = ""; // hide after start
-    console.log("Game started");
 
     let randomIdx = Math.floor(Math.random() * colors.length);
     let randomColor = colors[randomIdx];
@@ -44,7 +43,6 @@ function levelUp(){
     let randomButton = document.querySelector(`.${randomColor}`);
 
     gameSequence.push(randomColor);
-    console.log(gameSequence);
 
     // system flash
     setTimeout(() => {
@@ -94,7 +92,11 @@ function reset(){
         highScoreText.innerText = `High Score: ${highScore}`;
     }
 
-    center.innerText = `Game Over\nScore: ${score}\nTap to Restart`;
+    center.innerHTML = `
+        <div style="font-size: 1.1rem; font-weight: 600;">Game Over</div>
+        <div style="font-size: 0.95rem; opacity: 0.85;">Score: ${score}</div>
+        <div style="font-size: 0.8rem; opacity: 0.6;">Tap to Restart</div>
+    `;
     instruction.innerText = "Press center to start the game."
 
     gameSequence = [];
@@ -104,5 +106,3 @@ function reset(){
     level = 0;
 
 }
-
-
