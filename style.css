@@ -14,6 +14,7 @@ body{
     justify-content: center;
     background-color: black;
     color: white;
+    transition: background-color 0.15s ease;
 }
 
 h1 {
@@ -55,6 +56,7 @@ h4 {
     border-radius: 50%;
 
     position: relative; /* Needed so center circle is positioned correctly */
+    touch-action: none;
 }
 
 .btn{
@@ -97,7 +99,7 @@ h4 {
 
     /* this four for inner content of circle  */
     display: flex;
-    flex-direction: column; /* stack text vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
